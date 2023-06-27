@@ -1,0 +1,23 @@
+<div>You're in the show</div>
+
+<% @list.bookmarks.each do |bookmark| %>
+  <div class="movie d-flex">
+    <%= image_tag bookmark.movie.poster_url, class:"poster"%>
+    <div class="info">
+      <div>
+        <%= bookmark.movie.title %>
+      </div>
+      <div>
+        <%= bookmark.movie.overview %>
+      </div>
+      <div>
+        <%= bookmark.comment %>
+      </div>
+      <div>
+        <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to "Add a movie", new_list_bookmark_path(@list) %>

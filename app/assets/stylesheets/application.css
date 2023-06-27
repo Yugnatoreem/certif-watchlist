@@ -1,0 +1,17 @@
+.movie {
+  margin: 1rem;
+  border: solid grey;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px grey;
+  overflow: hidden;
+}
+
+.poster {
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info {
+  margin: 1rem;
+}

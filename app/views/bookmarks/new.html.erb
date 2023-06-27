@@ -1,0 +1,8 @@
+<div>
+  <h1>Which movie would you like to add ?</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
+    <%= f.input :comment %>
+    <%= f.submit class: 'btn btn-flat' %>
+  <% end %>
+</div>
